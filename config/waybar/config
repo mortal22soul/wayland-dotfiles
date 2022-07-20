@@ -1,0 +1,124 @@
+{
+	"layer": "top",
+	"modules-left": ["custom/powermenu", "sway/mode", "sway/workspaces", "cpu", "memory"],
+	"modules-center": ["sway/window"],
+	"modules-right": ["pulseaudio", "temperature", "backlight", "network", "clock", "tray"],
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-muted": " 婢 ",
+		"format-bluetooth": "{icon} {volume}%",
+		"on-click":"amixer -D pulse sset Master toggle",
+		"scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["","",""]
+        }
+	},
+	"custom/powermenu": {
+		"format": "",
+		"interval": "once",
+		"on-click": "~/.config/waybar/modules/power.sh",
+		"tooltip": false,
+		"signal": 8
+	},
+    "sway/mode": {
+        "tooltip": false,
+        "format": " {}",
+        "max-length": 50
+    },
+    "sway/workspaces": {
+        "disable-scroll-wraparound": true,
+        "disable-scroll": false,
+        "all-outputs": true,
+        "tooltip": false,
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+	 "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
+    },
+	"sway/window": {
+        "format": "{}",
+        "max-length": 50,
+        "rewrite": {
+            "(.*) - Mozilla Firefox": "🌎 $1",
+            "(.*) - vim": " $1",
+            "(.*) - zsh": " [$1]"
+            }
+    },
+	"backlight": {
+		"device": "acpi_video0",
+		"format": "{icon}  {}%",
+		"format-icons": ["", ""],
+		"interval": 1
+	},
+	"battery": {
+		"states": {
+			"good": 100,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{icon}  {capacity}%",
+		"format-charging": "   {capacity}%",
+		"format-plugged": "   {capacity}%",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"tray":{
+		"icon-size":18,
+		"show-passive-items":true,
+		"spacing": 10,
+		"reverse-direction": true
+	},
+	"clock": {
+		"interval": 1,
+		"tooltip": true,
+        "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "calendar-weeks-pos": "right",
+        "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+        "format-calendar-weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
+        "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>"
+	},
+	"cpu": {
+        "interval": 2,
+        "format": "{}% ",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 2,
+        "format": "{}% ",
+        "max-length": 10
+    },
+    "network": {
+        "interface": "wlan0",
+        "format": "{ifname}",
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    }
+}

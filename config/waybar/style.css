@@ -1,0 +1,197 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "JetbrainsMono Nerd Font";
+	font-size: 12px;
+}
+
+window#waybar {
+	background: none;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+window#waybar.empty {
+    background: none;
+}
+
+#waybar.empty #window {
+    background: none;
+}
+
+#window {
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	transition: none;
+	background: #2e3440;
+	color: #d8dee9;
+}
+
+#custom-powermenu {
+	margin-top: 6px;
+	margin-left: 12px;
+	padding-left: 15px;
+	padding-right: 20px;
+	border-radius: 5px;
+	transition: none;
+	background: #2e3440;
+}
+
+#mode {
+    margin-top: 6px;
+	margin-left: 12px;
+	padding-left: 15px;
+	padding-right: 20px;
+	border-radius: 5px;
+	transition: none;
+	background: #2e3440;
+}
+
+#workspaces {
+    margin-top: 6px;
+	margin-left: 12px;
+	padding-left: 15px;
+	padding-right: 20px;
+	border-radius: 5px;
+	transition: none;
+	background: #2e3440;
+}
+
+#workspaces button {
+	transition: none;
+	color: #4c566a;
+	background: transparent;
+	border-radius: 0px;
+}
+
+#workspaces button.occupied {
+	transition: none;
+	color: #a3be8c;
+	background: transparent;
+	font-size: 4px;
+}
+
+#workspaces button.focused {
+	color: #81a1c1;
+	border-bottom: 2px solid #81a1c1;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #81a1c1;
+}
+
+#temperature {
+	margin-top: 6px;
+	margin-left: 12px;
+	/*margin-right: 12px;*/
+	border-radius: 5px;
+	transition: none;
+	padding: 0 10px;
+	color: #a3be8c;
+	background: #2e3440;
+}
+
+#pulseaudio {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 0 10px;
+	color: #a3be8c;
+	background: #2e3440;
+}
+
+#battery {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #a3be8c;
+	background: #2e3440;
+}
+
+#battery.critical:not(.charging) {
+	background-color: #d8dee9;
+	color: #2e3440;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes blink {
+	to {
+		background-color: #bf616a;
+		color: #d8dee9;
+	}
+}
+
+#backlight {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #88c0d0;
+	background: #2e3440;
+}
+
+#cpu {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #88c0d0;
+	background: #2e3440;
+}
+
+#memory {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #88c0d0;
+	background: #2e3440;
+}
+
+#clock {
+	margin-top: 6px;
+	margin-left: 12px;
+	margin-right: 12px;
+	border-radius: 5px;
+	transition: none;
+	padding: 10px 10px;
+	color: #a3be8c;
+	background: #2e3440;
+}
+
+#tray {
+	margin-top: 6px;
+	margin-right: 12px;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #d8dee9;
+	background: #2e3440;
+}
+
+#network {
+	margin-top: 6px;
+	margin-left: 12px;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #d8dee9;
+	background: #2e3440;
+}

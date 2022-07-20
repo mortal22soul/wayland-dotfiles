@@ -1,0 +1,165 @@
+format = "$all"
+
+add_newline = false    # Don't print a new line at the start of the prompt
+
+[line_break]    # Make prompt a single line instead of two lines
+disabled = true
+
+# Use custom format
+
+#format = """
+#[┌───────────────────>](bold green)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) """
+
+[character]
+
+success_symbol = "[❯❯❯](bold green)"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold yellow)"
+
+#success_symbol = "[➜](bold green)"
+#error_symbol = "[✖](bold red)"
+
+#success_symbol = "[](bold green)"
+#error_symbol = "[](bold red)"
+#vicmd_symbol = "[](bold blue)"
+
+format = "$symbol (bold bright-black)"
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+format = " took [$duration]($style) "
+
+[directory]
+disabled=false
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+read_only = " "
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+symbol = " "
+threshold = 70
+style = "bold dimmed white"
+disabled = true
+
+[time]
+time_format = "%H:%M"
+format = "$time($style) "
+style = "cyan"
+disabled = true
+
+[username]
+style_user = "cyan"
+show_always = false
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = " "
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind "
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+symbol = " "
+disabled = false
+
+[python]
+format = "[$symbol$version]($style) "
+symbol = " "
+style = "bold green"
+
+[rust]
+format = "[$symbol$version]($style) "
+symbol = " "
+style = "bold green"
+
+[julia]
+format = "[$symbol$version]($style) "
+symbol = " "
+style = "bold green"
+
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
+[lua]
+symbol = "[](blue) "

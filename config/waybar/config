@@ -24,7 +24,7 @@
 	"custom/powermenu": {
 		"format": "",
 		"interval": "once",
-		"on-click": "~/.config/waybar/modules/power.sh",
+		"on-click": "wlogout",
 		"tooltip": false,
 		"signal": 8
 	},

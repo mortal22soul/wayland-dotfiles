@@ -5,7 +5,7 @@
     # Display notifications on monitor with mouse focus
     follow = mouse
     # Set {width}x{height} and {x_pos}+{y_pos}
-    width = (150,300)
+    width = (200,300)
     height = 100
     offset = 22x22
     origin = top-right # or top-left, or any other direction you prefer
@@ -14,7 +14,7 @@
     # Shrink window if smaller than width
     shrink = no
     # Set transparency of notifications
-    transparency = 25
+    transparency = 0
     # Height of seperators
     separator_height = 2
     # Text and seperator padding
@@ -22,9 +22,9 @@
     # Horizontal padding
     horizontal_padding = 8
     # Width of frame around window
-    frame_width = 2
+    frame_width = 4
     # Color of frame around window
-    frame_color = "#ddb6f2"
+    frame_color = "#2e3440"
     # Sort messages by urgency
     sort = yes
     # Idle seconds
@@ -53,7 +53,7 @@
     # Show age of message if message is older than x seconds
     show_age_threshold = -1
     # Split notifications into multiple lines
-    word_wrap = no
+    word_wrap = yes
     # If message too long, add ellipsize to...
     ellipsize = middle
     # Ignore newlines in notifications
@@ -67,8 +67,9 @@
 
     ### Icons ###
 
-    # Disable icons
-    icon_position = off
+    icon_position = left
+    icon_theme = "Papirus, candy-icons"
+    icon_path = "/usr/share/icons/Papirus/16x16/actions/:/usr/share/icons/Papirus/16x16/apps/:/usr/share/icons/Papirus/16x16/devices/:/usr/share/icons/Papirus/16x16/categories/"
 
     ### History ###
 
@@ -88,7 +89,7 @@
     # Notification class
     class = Dunst
     # Corner radius of dunst
-    corner_radius = 4
+    corner_radius = 2
     # Ignore dbus closeNotification message
     ignore_dbusclose = false
 
@@ -104,6 +105,13 @@
     close = ctrl+space
     # Close all notifications
     close_all = ctrl+shift+space
+
+[urgency_low]
+
+    # Low urgency notifications
+    background = "#2e3440"
+    foreground = "#f8f8f2"
+    timeout = 5
 
 [urgency_normal]
 
